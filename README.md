@@ -7,9 +7,13 @@ weather alert then the widget changes to show an alert icon with the severe aler
 Edit the index.coffee and review/modify the following items:
 1) The "iconSet" variable on the first line. This is the main weather icon that is displayed. Take a look at the folders in the "images" folder and decide
 which you like best.
-2) Edit the "command" on line 7 to set your forecast.io API key. Visit https://darksky.net/dev to register and generate a free API key. Note that the free
+2) The "numberOfDays" variable on the 2nd line controls how many days of forecast are shown. At the current time forecast-io returns a max of 8 days
+so the widget will reset any value larger than 8 back to 8.
+3) The "numberOfAlerts" variable on the 3rd line controls how many severe weather alerts are displayed. As the text of a severe weather alert can be
+rather long multiple simultaneous alerts can quickly fill the screen so adjust this to control how many are displayed.
+4) Edit the "command" on line 7 to set your forecast.io API key. Visit https://darksky.net/dev to register and generate a free API key. Note that the free
 key allows up to 1000 calls per day. Be sure to set the refreshFrequency appropriately.
-3) In the "command" call on line 7 set the latitude and longitude of the location for which the weather should be displayed.
+5) In the "command" call on line 7 set the latitude and longitude of the location for which the weather should be displayed.
 
 After edits the command should look like:
 command: 'curl -s https://api.forecast.io/forecast/your-api-key/latitude,longitude?exclude=minutely,hourly,flags'
@@ -21,7 +25,7 @@ Aqua, Climacons-Color, Grzanka, TWCNew, Yahoo, tick, Climacons, Crystal, Reall, 
 
 If you want to build your own icon set from other icons make sure to name them with the same names as the delivered icons.
 
-# Screenshots
+# Screenshot
 
 ![Alt text](/screenshot.png?raw=true)
 
