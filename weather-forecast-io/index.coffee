@@ -1,4 +1,6 @@
 iconSet = 'stardock'
+numberOfDays = 3 # max of 8 days
+numberOfAlerts = 1
 
 # edit the below URL to replace:
 #  apiKey with your forecast-io API apiKey
@@ -40,7 +42,7 @@ style: """
     font-family: Helvetica Neue
     font-weight: bold
     font-size: 12px
-    max-width: 1500px
+    max-width: 1000px
 
   .image
     float: left
@@ -89,13 +91,21 @@ update: (output, domEl) ->
   # forecast
   forecast = ""
   if weatherData.hasOwnProperty('alerts')
-    for i in [0..weatherData.alerts.length-1]
+    if numberOfAlerts < weatherData.alerts.length
+      maxAlerts = numberOfAlerts
+    else
+      maxAlerts = weatherData.alerts.length
+    for i in [0..maxAlerts-1]
       forecast = forecast + "<div style='white-space: pre-wrap;'>" + weatherData.alerts[i].title + " Expires " + new Date(weatherData.alerts[i].expires * 1000).toLocaleDateString('en-US', { weekday: 'short', hour: 'numeric', minute: 'numeric' });"</div>"
-      forecast = forecast + "<br>" + weatherData.alerts[i].description
+      forecast = forecast + "<br>" + weatherData.alerts[i].description + "<p>"
       forecast = forecast.replace(/\n/g, " ")
       forecast = forecast.replace(/\*/g, "\n* ")
   else
-    for i in [0..2]
+    if numberOfDays > 8
+      maxDays = 8
+    else
+      maxDays = numberOfDays
+    for i in [0..numberOfDays]
       forecastDate = "<div class=date>" + new Date(weatherData.daily.data[i].time * 1000).toLocaleDateString('en-US', {weekday: 'short'}) + "</div>"
       forecastTemps = "<div class=temp>" + Math.round(weatherData.daily.data[i].temperatureMax) + "° / " + Math.round(weatherData.daily.data[i].temperatureMin)+ "°</div>"
       forecastDescr = "<div class=desc>" + weatherData.daily.data[i].summary + "</div><br>"
