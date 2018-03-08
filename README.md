@@ -19,8 +19,8 @@ There are several iconSets delivered to choose between. The default is "stardock
 
 Aqua ![Aqua](/images/Aqua/clear-day.png?raw=true)
 Climacons-Color ![Climacons-Color](/images/Climacons-Color/clear-day.png?raw=true)
-
 Grzanka ![Grzanka](/images/Grzanka/clear-day.png?raw=true)
+
 TWCNew ![TWCNew](/images/TWCNew/clear-day.png?raw=true)
 Yahoo![Yahoo](/images/Yahoo/clear-day.png?raw=true)
 Tick ![Tick](/images/tick/clear-day.png?raw=true)
