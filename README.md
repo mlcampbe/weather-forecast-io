@@ -17,8 +17,20 @@ rather long multiple simultaneous alerts can quickly fill the screen so adjust t
 # Customization
 There are several iconSets delivered to choose between. The default is "stardock" but the widget also includes the
 below as well. Review these to see what you wish to use.
-![Aqua](/Aqua/clear-day.png)
-Aqua, Climacons-Color, Grzanka, TWCNew, Yahoo, tick, Climacons, Crystal, Reall, Vclouds
+Aqua ![Aqua](/images/Aqua/clear-day.png?raw=true)
+Climacons-Color ![Climacons-Color](/images/Climacons-Color/clear-day.png?raw=true)
+
+Grzanka ![Grzanka](/images/Grzanka/clear-day.png?raw=true)
+TWCNew ![TWCNew](/images/TWCNew/clear-day.png?raw=true)
+
+Yahoo![Yahoo](/images/Yahoo/clear-day.png?raw=true)
+Tick ![Tick](/images/tick/clear-day.png?raw=true)
+
+Climacons ![Climacons](/images/Climacons/clear-day.png?raw=true)
+Crystal![Crystal](/images/Crystal/clear-day.png?raw=true)
+
+Reall![Reall](/images/Reall/clear-day.png?raw=true)
+Vclouds![Vclouds](/images/Vclouds/clear-day.png?raw=true)
 
 If you want to build your own icon set from other icons make sure to name them with the same names as the delivered icons.
 
