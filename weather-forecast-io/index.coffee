@@ -1,12 +1,12 @@
-iconSet = 'stardock'
+iconSet = "stardock"
 numberOfDays = 3 # max of 8 days
 numberOfAlerts = 1
+latitude = "34.579491"
+longitude = "-86.941597"
+apiKey = "your api key from forecast-io"
+debug = 0
 
-# edit the below URL to replace:
-#  apiKey with your forecast-io API apiKey
-#  lat with the latitude for your location
-#  long with the longitude for your location
-command: 'curl -s https://api.forecast.io/forecast/apiKey/lat,long?exclude=minutely,hourly,flags'
+command: "curl -s 'https://api.forecast.io/forecast/#{apiKey}/#{latitude},#{longitude}?exclude=minutely,hourly,flags'"
 
 refreshFrequency: '15m'
 
@@ -73,7 +73,8 @@ render: -> """
 
 update: (output, domEl) ->
   weatherData = JSON.parse(output)
-  console.log(weatherData)
+  if debug
+    console.log(weatherData)
   # image
   if weatherData.hasOwnProperty('alerts')
     $(domEl).find('.image').html('<img src=' + "weather-forecast-io.widget/images/" + iconSet + "/severe.png" + '>')
@@ -105,7 +106,7 @@ update: (output, domEl) ->
       maxDays = 8
     else
       maxDays = numberOfDays
-    for i in [0..numberOfDays]
+    for i in [0..numberOfDays-1]
       forecastDate = "<div class=date>" + new Date(weatherData.daily.data[i].time * 1000).toLocaleDateString('en-US', {weekday: 'short'}) + "</div>"
       forecastTemps = "<div class=temp>" + Math.round(weatherData.daily.data[i].temperatureMax) + "° / " + Math.round(weatherData.daily.data[i].temperatureMin)+ "°</div>"
       forecastDescr = "<div class=desc>" + weatherData.daily.data[i].summary + "</div><br>"
