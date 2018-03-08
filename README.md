@@ -11,12 +11,8 @@ which you like best.
 so the widget will reset any value larger than 8 back to 8.
 3) The "numberOfAlerts" variable on the 3rd line controls how many severe weather alerts are displayed. As the text of a severe weather alert can be
 rather long multiple simultaneous alerts can quickly fill the screen so adjust this to control how many are displayed.
-4) Edit the "command" on line 7 to set your forecast.io API key. Visit https://darksky.net/dev to register and generate a free API key. Note that the free
-key allows up to 1000 calls per day. Be sure to set the refreshFrequency appropriately.
-5) In the "command" call on line 7 set the latitude and longitude of the location for which the weather should be displayed.
-
-After edits the command should look like:
-command: 'curl -s https://api.forecast.io/forecast/your-api-key/latitude,longitude?exclude=minutely,hourly,flags'
+4) Edit the latitude and longitude of the location you wish to display the weather details for in lines 4 & 5.
+5) Edit the apiKey on line 6 to set your forecast.io API key. Visit https://darksky.net/dev to register and generate a free API key. Note that the free key allows up to 1000 calls per day. Be sure to set the refreshFrequency appropriately.
 
 # Customization
 There are several iconSets delivered to choose between. The default is "stardock" but the widget also includes the
