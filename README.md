@@ -15,19 +15,21 @@ rather long multiple simultaneous alerts can quickly fill the screen so adjust t
 5) Edit the apiKey on line 6 to set your forecast.io API key. Visit https://darksky.net/dev to register and generate a free API key. Note that the free key allows up to 1000 calls per day. Be sure to set the refreshFrequency appropriately.
 
 # Customization
-There are several iconSets delivered to choose between. The default is "stardock" but the widget also includes the below as well. Review these to see what you wish to use.
+There are several iconSets delivered to choose between. The default is "stardock" but the widget also includes the below as well. Review these clear-day images to see what you wish to use.
 
+Stardoc ![stardock](/images/stardock/clear-day.png?raw=true)
 Aqua ![Aqua](/images/Aqua/clear-day.png?raw=true)
 Climacons-Color ![Climacons-Color](/images/Climacons-Color/clear-day.png?raw=true)
 Grzanka ![Grzanka](/images/Grzanka/clear-day.png?raw=true)
-
 TWCNew ![TWCNew](/images/TWCNew/clear-day.png?raw=true)
+
 Yahoo![Yahoo](/images/Yahoo/clear-day.png?raw=true)
 Tick ![Tick](/images/tick/clear-day.png?raw=true)
-
 Crystal![Crystal](/images/Crystal/clear-day.png?raw=true)
 Reall![Reall](/images/Reall/clear-day.png?raw=true)
 Vclouds![Vclouds](/images/Vclouds/clear-day.png?raw=true)
+
+Note that there is also an iconset called Climacons which have the same icons as Climacons-Color but all the icons are solid white. These do not show up here on a white background so that iconset is not listed.
 
 If you want to build your own icon set from other icons make sure to name them with the same names as the delivered icons.
 
