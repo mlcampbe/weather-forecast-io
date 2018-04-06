@@ -1,6 +1,7 @@
 {
-  "name": "weather-forecast-io",
+  "name": weather-forecast-io",
   "description": "Weather script that pulls current conditions from forecast-io",
   "author": "Mike Campbell",
-  "email": "mlcampbell@gmail.com"
+  "email": "mlcampbell@gmail.com",
+  "version": "180416"
 }
